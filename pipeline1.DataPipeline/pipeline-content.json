@@ -3,6 +3,7 @@
     "activities": [
       {
         "name": "Lookup1",
+        "description": "change at 1:59pm",
         "type": "Lookup",
         "state": "Inactive",
         "onInactiveMarkAs": "Succeeded",
@@ -207,7 +208,13 @@
           "secureInput": false
         },
         "typeProperties": {
-          "headers": {}
+          "functionName": "www",
+          "body": "{body}",
+          "headers": {},
+          "method": "POST"
+        },
+        "externalReferences": {
+          "connection": "a53ae183-d460-4597-9b1c-e8972a403a2a"
         }
       },
       {
