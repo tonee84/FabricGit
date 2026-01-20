@@ -3,6 +3,7 @@
     "activities": [
       {
         "name": "Lookup1",
+        "description": "change at 1:59pm",
         "type": "Lookup",
         "state": "Inactive",
         "onInactiveMarkAs": "Succeeded",
