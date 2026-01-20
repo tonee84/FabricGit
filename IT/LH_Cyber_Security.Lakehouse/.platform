@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "LH_Cyber_Security"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0ce0bc7d-4efe-a464-44b0-c99b9ca1c306"
+  }
+}

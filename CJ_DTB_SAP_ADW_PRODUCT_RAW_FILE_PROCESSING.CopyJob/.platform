@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "CopyJob",
+    "displayName": "CJ_DTB_SAP_ADW_PRODUCT_RAW_FILE_PROCESSING"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5c29267d-db0d-adb7-484a-82b257df823a"
+  }
+}
