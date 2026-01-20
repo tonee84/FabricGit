@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "name": "dbo",
+    "path": "/Files",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo",
+        "itemId": "a963dc31-96f7-4aa0-9b00-5e005c3595b1",
+        "workspaceId": "aa5c58c9-8de9-442d-b40f-bc2a0045c5dc"
+      }
+    }
+  }
+]
