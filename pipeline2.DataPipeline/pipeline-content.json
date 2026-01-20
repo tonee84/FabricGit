@@ -26,6 +26,7 @@
             "type": "LakehouseTableSink",
             "tableActionOption": "Append",
             "applyVOrder": true,
+            "partitionOption": "None",
             "datasetSettings": {
               "type": "LakehouseTable",
               "typeProperties": {
@@ -66,6 +67,7 @@
           "secureOutput": false
         },
         "name": "Copy data1",
+        "description": "de1 commit1",
         "dependsOn": []
       },
       {
