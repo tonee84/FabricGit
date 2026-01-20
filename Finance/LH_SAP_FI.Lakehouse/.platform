@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "LH_SAP_FI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8384296c-6a59-a18d-44e2-74fdc40db571"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "CopyJob",
+    "displayName": "CJ_DTB_SAP_ADW_CUSTOMER_TABLES"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b2b79f08-4366-ad31-4f5d-5ec9710533a4"
+  }
+}

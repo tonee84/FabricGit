@@ -1,0 +1,453 @@
+{
+  "properties": {
+    "jobMode": "Batch",
+    "source": {
+      "type": "SqlServerTable",
+      "connectionSettings": {
+        "type": "SqlServer",
+        "typeProperties": {
+          "database": "AdventureWorks2019"
+        },
+        "externalReferences": {
+          "connection": "13871a1b-7342-4673-a91a-9897c1fb9773"
+        }
+      }
+    },
+    "destination": {
+      "type": "LakehouseTable",
+      "connectionSettings": {
+        "type": "Lakehouse",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "432cb0ab-114a-be0a-4076-89b3b59661a5",
+          "rootFolder": "Tables"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00"
+    }
+  },
+  "activities": [
+    {
+      "id": "884f2e2c-69f9-4d58-a061-bc47d0236191",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "Address"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "Address"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "456a8184-6afe-4a72-b61f-5be0299f7b38",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "AddressType"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "AddressType"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "67d3b44f-ce73-499c-b9a2-4533cfc31412",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "BusinessEntity"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "BusinessEntity"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "07bc1b54-0cbe-45f6-9dbc-e2cef81974fe",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "BusinessEntityAddress"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "BusinessEntityAddress"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "5ca4c1c5-bd3b-4a58-9453-2c9ce11a37f0",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "BusinessEntityContact"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "BusinessEntityContact"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "f8af952c-34e1-4808-b397-309f8e248837",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "ContactType"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "ContactType"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "b531b125-366b-4531-a174-0aaad02ca6cf",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "CountryRegion"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "CountryRegion"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "e4332445-c502-4a5b-b698-3883e4627b25",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "EmailAddress"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "EmailAddress"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "f1661583-53a0-47ee-9284-21bdd433c1d8",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "Password"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "Password"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "f3dae5a7-e113-440f-9442-2cbf53bc5575",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "Person"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "Person"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "fe5874ed-2a30-4ce3-809d-216699ebc653",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "PersonPhone"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "PersonPhone"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "35e9e102-d64b-44bf-a9c0-f316a8740250",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "PhoneNumberType"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "PhoneNumberType"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "21b30747-ba8b-4c88-a5b3-27dd8f5b9d69",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "StateProvince"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "StateProvince"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "a87277f1-1c92-4bcc-b055-76df94dc8646",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "vAdditionalContactInfo"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "vAdditionalContactInfo"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "37f95ee5-59d2-4bf5-a6e8-6faf1352b1d7",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "vStateProvinceCountryRegion"
+          }
+        },
+        "destination": {
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "Person",
+            "table": "vStateProvinceCountryRegion"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "properties": {
+    "jobMode": "CDC",
+    "source": {
+      "type": "AzureSqlTable",
+      "connectionSettings": {
+        "type": "AzureSqlDatabase",
+        "typeProperties": {
+          "database": "adventureworks"
+        },
+        "externalReferences": {
+          "connection": "00dc6f05-2f70-4fb9-aac7-e496e118df85"
+        }
+      }
+    },
+    "destination": {
+      "type": "DelimitedText",
+      "connectionSettings": {
+        "type": "Lakehouse",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "8384296c-6a59-a18d-44e2-74fdc40db571",
+          "rootFolder": "Files"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00"
+    }
+  },
+  "activities": [
+    {
+      "id": "894fd11d-d2fe-47e3-89cc-624260be8b74",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Purchasing",
+            "table": "ProductVendor"
+          },
+          "changeDataSettings": {
+            "readMethod": "SnapshotPlusIncremental",
+            "columns": [
+              {
+                "name": "ModifiedDate",
+                "type": "DateTime",
+                "physicalType": "datetime"
+              }
+            ]
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Purchasing.ProductVendor.csv",
+              "folderPath": "Purchasing/To_Be_Processed"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "fileExtension": ".txt"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "6cccb54e-9297-4b0a-81e7-1bccc47785ff",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Purchasing",
+            "table": "PurchaseOrderDetail"
+          },
+          "changeDataSettings": {
+            "readMethod": "SnapshotPlusIncremental",
+            "columns": [
+              {
+                "name": "ModifiedDate",
+                "type": "DateTime",
+                "physicalType": "datetime"
+              }
+            ]
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Purchasing.PurchaseOrderDetail.csv",
+              "folderPath": "Purchasing/To_Be_Processed"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "fileExtension": ".txt"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "cb238281-2974-4625-b8f2-99c86a70f0f4",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Purchasing",
+            "table": "PurchaseOrderHeader"
+          },
+          "changeDataSettings": {
+            "readMethod": "SnapshotPlusIncremental",
+            "columns": [
+              {
+                "name": "ModifiedDate",
+                "type": "DateTime",
+                "physicalType": "datetime"
+              }
+            ]
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Purchasing.PurchaseOrderHeader.csv",
+              "folderPath": "Purchasing/To_Be_Processed"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "fileExtension": ".txt"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "d433b754-f194-43cc-819f-813ee0d2b501",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Purchasing",
+            "table": "ShipMethod"
+          },
+          "changeDataSettings": {
+            "readMethod": "SnapshotPlusIncremental",
+            "columns": [
+              {
+                "name": "ModifiedDate",
+                "type": "DateTime",
+                "physicalType": "datetime"
+              }
+            ]
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Purchasing.ShipMethod.csv",
+              "folderPath": "Purchasing/To_Be_Processed"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "fileExtension": ".txt"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "65d64abe-5b09-431a-9667-ef83d9c22201",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Purchasing",
+            "table": "Vendor"
+          },
+          "changeDataSettings": {
+            "readMethod": "SnapshotPlusIncremental",
+            "columns": [
+              {
+                "name": "ModifiedDate",
+                "type": "DateTime",
+                "physicalType": "datetime"
+              }
+            ]
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Purchasing.Vendor.csv",
+              "folderPath": "Purchasing/To_Be_Processed"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "fileExtension": ".txt"
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    }
+  ]
+}

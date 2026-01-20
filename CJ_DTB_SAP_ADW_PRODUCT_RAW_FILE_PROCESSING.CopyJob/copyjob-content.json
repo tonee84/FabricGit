@@ -1,0 +1,873 @@
+{
+  "properties": {
+    "jobMode": "Batch",
+    "source": {
+      "type": "AzureSqlTable",
+      "connectionSettings": {
+        "type": "AzureSqlDatabase",
+        "typeProperties": {
+          "database": "adventureworks"
+        },
+        "externalReferences": {
+          "connection": "00dc6f05-2f70-4fb9-aac7-e496e118df85"
+        }
+      }
+    },
+    "destination": {
+      "type": "Parquet",
+      "connectionSettings": {
+        "type": "Lakehouse",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "8384296c-6a59-a18d-44e2-74fdc40db571",
+          "rootFolder": "Files"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00"
+    }
+  },
+  "activities": [
+    {
+      "id": "c3613d07-ff8a-4ade-beac-8b71fe93cc7b",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "BillOfMaterials"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.BillOfMaterials.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "fb85079b-b708-4dd6-b48a-57a0e4b6e1f7",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "Culture"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.Culture.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "b40181d3-e645-4e23-83cb-1fb041da0ebf",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "Document"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.Document.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "e874890d-bd11-43dd-b9da-679e0e2ab184",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "Illustration"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.Illustration.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "6ab0d5c7-1f18-4fe9-934b-ed1f10c9b31a",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "Location"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.Location.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "e205a568-c889-4c12-8e92-747c945c422c",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "Product"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.Product.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "52740cbb-cf77-4ef7-ada2-25c49f77a4ac",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductCategory"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductCategory.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "a76d8355-41eb-4acb-8c91-8866b8c7a91d",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductCostHistory"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductCostHistory.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "730d8e35-46e5-423e-bded-43ac6bd8d5fc",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductDescription"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductDescription.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "6ff7da41-a86f-4962-908d-06d5a6f66ef2",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductDocument"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductDocument.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "630509a9-97cf-4007-bcfb-530344f26d91",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductInventory"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductInventory.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "770532e7-85b9-447a-a711-5b892ffe5502",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductListPriceHistory"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductListPriceHistory.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "8afe72e4-19eb-4ac5-be56-90b720dcb631",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductModel"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductModel.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "983b19ef-fabc-44d0-8b5e-cc24be106759",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductModelIllustration"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductModelIllustration.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "875e8af6-559f-470a-a1c0-70bf0e0e352d",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductModelProductDescriptionCulture"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductModelProductDescriptionCulture.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "847540e7-9d7f-4b7a-a034-c58bb8b06d8a",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductPhoto"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductPhoto.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "bb3aa838-75d8-4add-bcc4-9ba16fe8c3d4",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductProductPhoto"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductProductPhoto.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "3273064f-0658-47dc-90dd-4e99054cb7d0",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductReview"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductReview.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "cc28a573-a0a8-4bd7-adf6-2b2e195e905a",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ProductSubcategory"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ProductSubcategory.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "160d77c0-5d2d-48af-9016-109d69fa230f",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "ScrapReason"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.ScrapReason.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "d33449cd-d70b-4983-8050-96e7bbce4ba8",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "TransactionHistory"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.TransactionHistory.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "f5990e0e-3cd0-4b92-bb73-7acbac224897",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "TransactionHistory_Page"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.TransactionHistory_Page.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "57a74d63-67ad-4dc4-a255-b6a451ab33ea",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "TransactionHistoryArchive"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.TransactionHistoryArchive.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    },
+    {
+      "id": "7d41ae6f-7663-40cc-b1f5-a08e1f00f546",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "Production",
+            "table": "UnitMeasure"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "Production.UnitMeasure.parquet",
+              "folderPath": "Production/To_Be_Proccessed"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {},
+          "formatSettings": {
+            "enableVertiParquet": true
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    }
+  ]
+}
